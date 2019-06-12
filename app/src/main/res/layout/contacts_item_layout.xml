@@ -6,10 +6,23 @@
     <TextView
         android:id="@+id/tv_contact_titles"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="#FF8B00"
+        android:textSize="25sp"/>
     <TextView
         android:id="@+id/tv_contacts_numbers"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="29dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        android:textColor="#FFFCCC"
         />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddd"/>
 </LinearLayout>

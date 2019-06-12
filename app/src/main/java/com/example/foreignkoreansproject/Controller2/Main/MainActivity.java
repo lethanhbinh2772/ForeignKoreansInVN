@@ -1,35 +1,39 @@
-package com.example.foreignkoreansproject.Controller1.Main1;
+package com.example.foreignkoreansproject.Controller2.Main;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.foreignkoreansproject.R;
 
 public class MainActivity extends AppCompatActivity {
-    TextView tvToContactsActivity;
-    TextView tvToPlacesActivity;
-    TextView tvToPromotionActivity;
+    LinearLayout lnToContactsActivity;
+    LinearLayout lnToPlacesActivity;
+    LinearLayout lnToPromotionActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         init();
         toContactsActivity();
         toPlacesActivity();
         toPromotionActivity();
     }
     private void init() {
-        tvToContactsActivity = findViewById(R.id.tv_contact);
-        tvToPlacesActivity = findViewById(R.id.tv_places);
-        tvToPromotionActivity = findViewById(R.id.tv_promotion);
+        lnToContactsActivity = findViewById(R.id.ln_contact);
+        lnToPlacesActivity = findViewById(R.id.ln_places);
+        lnToPromotionActivity = findViewById(R.id.ln_promotion);
     }
 
     private void toContactsActivity() {
-        tvToContactsActivity.setOnClickListener(new View.OnClickListener() {
+        lnToContactsActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,ContactsActivity.class);
@@ -39,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void toPromotionActivity(){
-        tvToPlacesActivity.setOnClickListener(new View.OnClickListener() {
+        lnToPlacesActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,PlacesActivity.class);
@@ -50,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void toPlacesActivity(){
-        tvToPromotionActivity.setOnClickListener(new View.OnClickListener() {
+        lnToPromotionActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,PromotionActivity.class);

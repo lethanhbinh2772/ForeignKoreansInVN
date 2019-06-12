@@ -1,56 +1,103 @@
 package com.example.foreignkoreansproject.Model;
 
 import java.util.List;
+
 import com.google.gson.annotations.Expose;
+
 import com.google.gson.annotations.SerializedName;
 
-public class Promotion {
+
+
+public class Place {
+
+
 
     @SerializedName("status")
+
     @Expose
-    private Integer status;
+
+    public Integer status;
+
     @SerializedName("code")
+
     @Expose
-    private Integer code;
+
+    public Integer code;
+
     @SerializedName("result")
+
     @Expose
-    private List<PromotionResult> result = null;
+
+    public List<PlaceResult> placeResults = null;
+
     @SerializedName("message")
+
     @Expose
-    private String message;
+
+    public String message;
+
+
 
     public Integer getStatus() {
+
         return status;
+
     }
+
+
 
     public void setStatus(Integer status) {
+
         this.status = status;
+
     }
+
+
 
     public Integer getCode() {
+
         return code;
+
     }
+
+
 
     public void setCode(Integer code) {
+
         this.code = code;
+
     }
 
-    public List<PromotionResult> getResult() {
-        return result;
+
+
+    public List<PlaceResult> getPlaceResults() {
+
+        return placeResults;
+
     }
 
-    public void setResult(List<PromotionResult> result) {
-        this.result = result;
+
+
+    public void setPlaceResults(List<PlaceResult> placeResults) {
+
+        this.placeResults = placeResults;
+
     }
+
+
 
     public String getMessage() {
+
         return message;
+
     }
 
+
+
     public void setMessage(String message) {
+
         this.message = message;
+
     }
 
 }
-
-

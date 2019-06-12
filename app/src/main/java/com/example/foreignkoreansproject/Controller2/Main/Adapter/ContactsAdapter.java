@@ -1,4 +1,4 @@
-package com.example.foreignkoreansproject.Controller.Main.Main.Adapter;
+package com.example.foreignkoreansproject.Controller2.Main.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.foreignkoreansproject.Model.Contact;
 import com.example.foreignkoreansproject.Model.ContactResult;
 import com.example.foreignkoreansproject.R;
 
@@ -35,8 +34,8 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
     @Override
     public void onBindViewHolder(@NonNull ContactsViewHolder contactsViewHolder, int i) {
         ContactResult contact = data.get(i);
-        contactsViewHolder.tvContactsTitle.setText(contact.getName());
         contactsViewHolder.tvContactsNumber.setText(contact.getPhone());
+        contactsViewHolder.tvContactsTitle.setText(contact.getName());
     }
 
     @Override
@@ -51,8 +50,8 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
 
         public ContactsViewHolder(@NonNull View itemView){
             super(itemView);
+            tvContactsNumber = itemView.findViewById(R.id.tv_contacts_numbers);
             tvContactsTitle = itemView.findViewById(R.id.tv_contact_titles);
-            tvContactsNumber = itemView.findViewById(R.id.tv_contact_titles);
         }
     }
 }

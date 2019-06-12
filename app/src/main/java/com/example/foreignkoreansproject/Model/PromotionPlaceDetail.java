@@ -4,8 +4,7 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-
-public class Result {
+public class PromotionPlaceDetail {
 
     @SerializedName("placeID")
     @Expose
@@ -42,16 +41,16 @@ public class Result {
     private Integer isPromotion;
     @SerializedName("longitude")
     @Expose
-    private Integer longitude;
+    private Double longitude;
     @SerializedName("latitude")
     @Expose
-    private Integer latitude;
+    private Double latitude;
     @SerializedName("kakaoTalk")
     @Expose
     private String kakaoTalk;
     @SerializedName("listMedia")
     @Expose
-    private List<Object> listMedia = null;
+    private List<ListMedium> listMedia = null;
 
     public Integer getPlaceID() {
         return placeID;
@@ -141,19 +140,19 @@ public class Result {
         this.isPromotion = isPromotion;
     }
 
-    public Integer getLongitude() {
+    public Double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Integer longitude) {
+    public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
 
-    public Integer getLatitude() {
+    public Double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Integer latitude) {
+    public void setLatitude(Double latitude) {
         this.latitude = latitude;
     }
 
@@ -165,11 +164,11 @@ public class Result {
         this.kakaoTalk = kakaoTalk;
     }
 
-    public List<Object> getListMedia() {
+    public List<ListMedium> getListMedia() {
         return listMedia;
     }
 
-    public void setListMedia(List<Object> listMedia) {
+    public void setListMedia(List<ListMedium> listMedia) {
         this.listMedia = listMedia;
     }
 
