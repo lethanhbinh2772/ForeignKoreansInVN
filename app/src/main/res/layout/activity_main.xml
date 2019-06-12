@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1"
-    android:background="#FFF000"
+    android:background="@mipmap/img_places"
     >
     <TextView
         android:id="@+id/tv_places"
@@ -15,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Places"
-        android:textColor="#292929"
+        android:textColor="#262626"
+        android:textStyle="bold"
         android:textSize="50sp"
         android:gravity="center"
         />
@@ -25,13 +26,22 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#90EE90">
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:background="@mipmap/img_promotion1">
+        <View android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#262626"/>
+
         <TextView
             android:id="@+id/tv_promotion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Promotion"
+            android:layout_weight="99"
+            android:textStyle="bold"
             android:textColor="#292929"
             android:textSize="50sp"
             android:gravity="center"
@@ -42,14 +52,23 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#90EE"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:background="@mipmap/img_contact"
         >
+        <View android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#262626"/>
+
         <TextView
             android:id="@+id/tv_contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Contact"
+            android:layout_weight="99"
+            android:textStyle="bold"
             android:textColor="#292929"
             android:textSize="50sp"
             android:gravity="center"

@@ -34,5 +34,5 @@ public class ContactsActivity extends AppCompatActivity {
         contactsAdapter.setContext(this);
         rvContacts.setAdapter(contactsAdapter);
     }
-    
+
 }
