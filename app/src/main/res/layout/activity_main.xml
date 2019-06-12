@@ -1,0 +1,59 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="#FFF000"
+    >
+    <TextView
+        android:id="@+id/tv_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Places"
+        android:textColor="#292929"
+        android:textSize="50sp"
+        android:gravity="center"
+        />
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#90EE90">
+        <TextView
+            android:id="@+id/tv_promotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Promotion"
+            android:textColor="#292929"
+            android:textSize="50sp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#90EE"
+        >
+        <TextView
+            android:id="@+id/tv_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Contact"
+            android:textColor="#292929"
+            android:textSize="50sp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+</LinearLayout>
