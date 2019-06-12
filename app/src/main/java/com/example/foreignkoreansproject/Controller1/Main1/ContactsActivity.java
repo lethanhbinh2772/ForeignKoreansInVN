@@ -21,8 +21,9 @@ public class ContactsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
         configRvContacts();
-        readJson();
-
+        String strContacts = Utils.loadJSONFromAsset(this);
+        Gson gson = new Gson();
+        contact = gson.fromJson(strContacts, Contact.class);
     }
 
     private void configRvContacts() {
@@ -33,9 +34,5 @@ public class ContactsActivity extends AppCompatActivity {
         contactsAdapter.setContext(this);
         rvContacts.setAdapter(contactsAdapter);
     }
-    private void readJson() {
-        String strContacts = Utils.loadJSONFromAsset(this);
-        Gson gson = new Gson();
-        contact = gson.fromJson(strContacts, Contact.class);
-    }
+    
 }
